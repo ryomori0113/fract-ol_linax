@@ -65,6 +65,7 @@ void	mk_mandel(void)
 	img_drawing(&elemt);
 	mlx_mouse_hook(elemt.win, mouse_hook, &elemt);
 	mlx_key_hook(elemt.win, key_hook, &elemt);
+	mlx_hook(elemt.win, 17, 1L << 0, exit_wind, (void *)&elemt);
 	mlx_loop(elemt.mlx);
 	exit(0);
 }
